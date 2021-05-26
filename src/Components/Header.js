@@ -89,7 +89,7 @@ const Header = ({ data }) => {
 
       <p className="scrolldown">
         <a className="smoothscroll" href="#about">
-        <i class="fas fa-mouse"></i>
+        <i class="fa fa-phone"></i>
         </a>
       </p>
     </header>

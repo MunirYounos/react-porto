@@ -83,7 +83,7 @@
 		var y = $(window).scrollTop();
       var nav = $('#nav-wrap');
 
-	   if ( (y > h*.10) && (y < h) && ($(window).outerWidth() > 768 ) ) {
+	   if ( (y > h*.10) && (y < h) && ($(window).outerWidth() > 338 ) ) {
 	      nav.fadeOut('fast');
 	   }
       else {

@@ -25,18 +25,21 @@ e. Others
 /* ------------------------------------------------------------------ */
 /* a. Webfonts and Icon fonts
  ------------------------------------------------------------------ */
-
-@import url("fonts.css");
-@import url("fontello/css/fontello.css");
-@import url("font-awesome/css/font-awesome.min.css");
-
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 /* ------------------------------------------------------------------
 /* b. Reset
       Adapted from:
       Normalize.css - https://github.com/necolas/normalize.css/
       HTML5 Doctor Reset - html5doctor.com/html-5-reset-stylesheet/
 /* ------------------------------------------------------------------ */
-
+:root {
+--ff: 'IBM Plex Mono', monospace;
+--navy: 	#002244;
+--blue: #3457D5;
+--accent: #00CCFF;
+--smoke: #f7f7f7;
+}
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -102,7 +105,7 @@ ins {
 }
 
 mark {
-   background-color: #A7F4F6;
+   background-color: var(--accent);
    color: #555;
 }
 
@@ -134,6 +137,7 @@ table {
    -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
    box-sizing: border-box;
+   font-family: var(--ff);
 }
 
 html {
@@ -145,8 +149,8 @@ body {
    font-weight: normal;
    font-size: 15px;
    line-height: 30px;
-	color: #838C95;
-
+	color: var(--smoke);
+   font-family: var(--ff);
    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
 }
@@ -158,6 +162,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
    color: #313131;
    font-weight: normal;
+   font-family: var(--ff);
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 h1 { font-size: 38px; line-height: 42px; margin-bottom: 12px; letter-spacing: -1px; }
@@ -284,7 +289,7 @@ hr { border: solid #E3E3E3; border-width: 1px 0 0; clear: both; margin: 11px 0 3
 a, a:visited {
    text-decoration: none;
    outline: 0;
-   color: #11ABB0;
+   color: var(--blue);
 
    -webkit-transition: color .3s ease-in-out;
    -moz-transition: color .3s ease-in-out;
@@ -459,8 +464,8 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-   font: 16px/30px 'opensans-bold', sans-serif;
-   background: #11ABB0;
+   font: 16px/30px var(--ff);
+   background: var(--accent);
    display: inline-block;
 	text-decoration: none;
    letter-spacing: 0;
